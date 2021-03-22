@@ -1,0 +1,268 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pangolin', cursive;
+    overflow-x: hidden;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    top: 0;
+    padding:5px;
+    
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    line-height: 5px;
+
+}
+.nav-link ul{
+    display: flex;
+    padding: 5px;
+
+}
+.nav-link ul li{
+    list-style: none;
+
+}
+.nav-link ul li a {
+    text-transform: uppercase;
+    padding: 5px;
+    padding-right: 10px;
+    position: relative;
+    text-decoration: none;
+    color: turquoise;
+
+}
+.nav-link ul li  a:before{
+    position:absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height:3px;
+    width:100%;
+    background:black;
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .4s linear;
+}
+.nav-link ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin:left;
+}
+.tb{
+    position: absolute;
+    top:.75rem;
+    right:1rem;
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height:21px;
+}
+.tb .bar{
+    height: 3px;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+
+}
+.jumb{
+    text-align: center;
+    color:turquoise;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+}
+.the{
+    border-color:rgb(7, 43, 39);
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 400px;
+    border-width: 1px;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.submit{
+    border-radius: 30px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    border-width: 0px;
+}
+.submit:hover{
+    color: turquoise;
+}
+
+.abt{
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+   padding-bottom: 10px;
+}
+#about{
+    background-color: whitesmoke;
+}
+
+.im{
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+}
+.comp{
+    line-height: 50px;
+
+}
+#services{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: minmax(100px,80vh);
+    text-align: center;
+    background-color: gray;
+    padding-left: 20px;
+    padding-right: 10px;
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.web{
+    grid-row: 1;
+    grid-column: 2/6;
+}
+.net{
+    grid-row: 1;
+    grid-column: 7/12;
+
+}
+.install{
+    grid-row: 2;
+    grid-column: 2/6;
+}
+.solar{
+    grid-row: 2;
+    grid-column: 7/12;
+}
+.image{
+    height: 200px;
+    width: 300px;
+    border-radius: 15px;
+}
+.left{
+    
+    transform: translateX(-50%);
+
+
+}
+.right{
+   
+    transform: translateX(50%);
+
+}
+.left,
+.right{
+    transition:opacity 250ms ease-in ;
+    transition:opacity 250ms ease-in;
+    transition:opacity 250ms ease-in;
+    transition:opacity 250ms ease-in;
+    opacity: 0;
+}
+.left.appear{
+    
+    transform: translateX(0);
+    opacity: 1;
+    
+}
+.right.appear{
+    
+    transform: translateX(0);
+    opacity: 1;
+}
+span{
+    content: "\2022";
+}
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+}
+.just{
+    height:30px;
+    border-radius: 10px;
+    width: 140px;
+    padding: 5px;
+    border: 0px;
+    background-color: turquoise;
+    cursor: pointer;
+}
+.contact{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.con{
+    text-align: center;
+    font-style: italic;
+    background-color: whitesmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+
+}
+footer{
+    text-align: center;
+    background-color: whitesmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media (max-width:600px){
+   
+    .abt{
+        display: block;
+    }
+    .wrapper{
+        display: block;
+    }
+    .nav-link{
+        display: none;
+    }
+    .tb{
+        display: flex;
+    }
+    .active{
+        display: flex;
+    
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-link ul{
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .nav-link  li{
+        text-align: center;
+        padding: 20px;
+        text-align: center;
+    }
+    .nav-link  li a{
+        padding: 30px;
+        line-height: 15px;
+    }
+}
